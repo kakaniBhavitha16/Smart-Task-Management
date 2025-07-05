@@ -51,7 +51,7 @@ export const sendWelcomeEmail = async (userEmail, userName, tempPassword) => {
         <body>
           <div class="container">
             <div class="header">
-              <h1>🎉 Welcome to Smart Task Manager!</h1>
+              <h1> Welcome to Smart Task Manager!</h1>
               <p>Your account has been created successfully</p>
             </div>
             <div class="content">
@@ -74,7 +74,7 @@ export const sendWelcomeEmail = async (userEmail, userName, tempPassword) => {
               </div>
 
               <div style="text-align: center;">
-                <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/login" class="button">🚀 Login to Smart Task Manager</a>
+                <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/login" class="button"> Login to Smart Task Manager</a>
               </div>
 
               <h3>Getting Started:</h3>
