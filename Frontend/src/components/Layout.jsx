@@ -30,16 +30,16 @@ export default function Layout({ children }) {
     setSidebarOpen(false);
   };
 
-  const navigation = [
+ const navigation = [
+  ...(user?.role === 'user' ? [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-    ...(user?.role === 'user' ? [
-      { name: 'Tasks', href: '/tasks', icon: CheckSquare }
-    ] : []),
-    ...(user?.role === 'admin' ? [
-      { name: 'User Management', href: '/admin/users', icon: Users },
-      { name: 'Admin Panel', href: '/admin', icon: Shield }
-    ] : []),
-  ];
+    { name: 'Tasks', href: '/tasks', icon: CheckSquare }
+  ] : []),
+  ...(user?.role === 'admin' ? [
+    { name: 'Admin Panel', href: '/admin', icon: Shield },
+    { name: 'User Management', href: '/admin/users', icon: Users }
+  ] : []),
+];
 
   const isActive = (href) => location.pathname === href;
 
@@ -50,7 +50,7 @@ export default function Layout({ children }) {
         <div className="fixed inset-0 bg-gray-600 bg-opacity-75" onClick={() => setSidebarOpen(false)} />
         <div className="fixed inset-y-0 left-0 flex w-64 flex-col bg-white">
           <div className="flex h-16 items-center justify-between px-4">
-            <h1 className="text-xl font-bold text-gray-900">Smart Task Manager</h1>
+            <h1 className="text-xl font-bold text-gray-900">TaskFlow</h1>
             <button
               onClick={() => setSidebarOpen(false)}
               className="text-gray-500 hover:text-gray-700"

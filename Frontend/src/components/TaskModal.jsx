@@ -3,6 +3,8 @@ import { X } from 'lucide-react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
+// const BASE_URL = process.env.REACT_APP_BASE_URL;
+
 export default function TaskModal({ task, onClose, onSave }) {
   const [formData, setFormData] = useState({
     title: '',
@@ -23,7 +25,6 @@ export default function TaskModal({ task, onClose, onSave }) {
         status: task.status || 'pending'
       });
     } else {
-      // Set minimum date to today for new tasks
       const today = new Date().toISOString().split('T')[0];
       setFormData(prev => ({ ...prev, dueDate: today }));
     }
@@ -43,7 +44,7 @@ export default function TaskModal({ task, onClose, onSave }) {
       if (task) {
         response = await axios.put(`https://smart-task-management.onrender.com/api/tasks/${task._id}`, taskData);
       } else {
-        response = await axios.post('https://smart-task-management.onrender.com/api/tasks', taskData);
+        response = await axios.post(`https://smart-task-management.onrender.com/api/tasks`, taskData);
       }
 
       if (response.data.success) {
@@ -59,17 +60,10 @@ export default function TaskModal({ task, onClose, onSave }) {
   };
 
   const categories = [
-    'Work',
-    'Personal',
-    'Health',
-    'Education',
-    'Shopping',
-    'Finance',
-    'Travel',
-    'Other'
+    'Work', 'Personal', 'Health', 'Education',
+    'Shopping', 'Finance', 'Travel', 'Other'
   ];
 
-  // Get today's date in YYYY-MM-DD format for min attribute
   const today = new Date().toISOString().split('T')[0];
 
   return (
