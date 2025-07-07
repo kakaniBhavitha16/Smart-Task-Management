@@ -51,8 +51,8 @@ A full-stack task management application with advanced admin capabilities, built
 
 Access the deployed application: [Smart Task Manager Live](https://smart-task-management.vercel.app/login)
 client Login Details
-Email: pavanummagani1@gmail.com
-Password: Sf9t^Ot2$jFz
+Email: kakanibhavitha8@gmail.com
+Password: 2Om2u3x&Ulf%
 
 Admin Login Details
 Email:bhavithakakani@gmail.com
