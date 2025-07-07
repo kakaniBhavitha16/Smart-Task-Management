@@ -1,4 +1,4 @@
-# Smart Task Manager - Smart Task Management System
+# TaskFlow - Smart Task Management System
 
 A full-stack task management application with advanced admin capabilities, built with modern web technologies.
 
@@ -49,7 +49,7 @@ A full-stack task management application with advanced admin capabilities, built
 
 ## Live Demo
 
-Access the deployed application: [Smart Task Manager Live](smart-task-management.vercel.app)
+Access the deployed application: [Smart Task Manager Live](https://smart-task-management.vercel.app/login)
 client Login Details
 Email: pavanummagani1@gmail.com
 Password: Sf9t^Ot2$jFz
