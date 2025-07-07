@@ -51,12 +51,12 @@ export const sendWelcomeEmail = async (userEmail, userName, tempPassword) => {
         <body>
           <div class="container">
             <div class="header">
-              <h1> Welcome to Smart Task Manager!</h1>
+              <h1> Welcome to TaskFlow</h1>
               <p>Your account has been created successfully</p>
             </div>
             <div class="content">
               <h2>Hello ${userName},</h2>
-              <p>Your administrator has created an account for you on Smart Task Manager. You can now start managing your tasks efficiently!</p>
+              <p>Your administrator has created an account for you on Tas. You can now start managing your tasks efficiently!</p>
 
               <div class="credentials">
                 <h3>Your Login Credentials:</h3>
@@ -74,7 +74,7 @@ export const sendWelcomeEmail = async (userEmail, userName, tempPassword) => {
               </div>
 
               <div style="text-align: center;">
-                <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/login" class="button"> Login to Smart Task Manager</a>
+                <a href="${process.env.FRONTEND_URL || 'http://localhost:5173'}/login" class="button"> Login to TaskFlow</a>
               </div>
 
               <h3>Getting Started:</h3>
@@ -87,10 +87,10 @@ export const sendWelcomeEmail = async (userEmail, userName, tempPassword) => {
 
               <p>If you have any questions or need assistance, please contact your administrator.</p>
               <p>Happy task managing!</p>
-              <p><strong>The Smart Task Manager Team</strong></p>
+              <p><strong>The TaskFlow Team</strong></p>
             </div>
             <div class="footer">
-              <p>This email was sent from Smart Task Manager, The Task Management System</p>
+              <p>This email was sent from TaskFlow, The Task Management System</p>
               <p>Please do not reply to this email</p>
             </div>
           </div>

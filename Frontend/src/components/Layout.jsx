@@ -80,7 +80,7 @@ export default function Layout({ children }) {
       {/* Desktop sidebar */}
       <div className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col bg-white shadow-lg">
         <div className="flex h-16 items-center px-6 border-b border-gray-200">
-          <h1 className="text-xl font-bold text-gray-900">Smart Task Manager</h1>
+          <h1 className="text-xl font-bold text-gray-900">TaskFlow</h1>
         </div>
         <nav className="flex-1 px-4 py-4">
           {navigation.map((item) => (
